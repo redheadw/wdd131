@@ -1,0 +1,109 @@
+:root{
+  --bg: #0d0f12;
+  --surface: #ffffff;
+  --ink: #0f172a;
+  --muted: #475569;
+  --brand: #0ea5e9;
+  --hdr-1: #1f2937;
+  --hdr-2: #374151;
+  --hdr-3: #111827;
+}
+
+*{ box-sizing: border-box; }
+html, body{
+  margin:0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Header (two dark bars) */
+header{ background: var(--hdr-3); color:#fff; padding:0; border-bottom:none; }
+#course-title{
+  display:block;
+  text-align:center;
+  font-weight:800;
+  font-size: clamp(1.25rem, 2.8vw, 2rem);
+  letter-spacing:.2px;
+  padding:.9rem 1rem;
+  background: var(--hdr-1);
+  margin:0;
+}
+#course-title .accent{ color: var(--brand); font-weight:800; }
+
+nav{ background: var(--hdr-2); }
+nav ul{
+  list-style:none;
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  gap:2rem;
+  margin:0;
+  padding:.8rem 1rem;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  border-bottom:2px solid transparent;
+  padding:.3rem .4rem;
+}
+nav a:hover, nav a:focus{ border-color: var(--brand); outline:none; }
+
+/* Main layout */
+main{
+  max-width:1100px;
+  margin:2rem auto;
+  padding:0 1rem;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:1.25rem;
+}
+@media (max-width:768px){ main{ grid-template-columns:1fr; } }
+
+main > h1{
+  grid-column:1 / -1;
+  color:#e2e8f0;
+  margin:0 0 .75rem;
+  font-weight:800;
+}
+
+/* Cards */
+.card{
+  background: var(--surface);
+  border:1px solid #cbd5e1;
+  border-radius:14px;
+  padding:1rem;
+  box-shadow:0 6px 16px rgba(2,6,23,.06);
+  position:relative;
+}
+.card h2{
+  text-align:center;
+  background: var(--hdr-1);
+  color:#fff;
+  margin:-1rem -1rem 1rem;
+  padding:.7rem 1rem;
+  border-radius:12px 12px 0 0;
+  font-weight:800;
+}
+.card img{
+  width:100%;
+  height:auto;
+  border-radius:10px;
+  display:block;
+  margin:.25rem 0 .75rem;
+}
+.card .links{ padding-left:1.1rem; margin:.25rem 0 0; }
+.card .links a{ color: var(--brand); }
+
+/* Footer */
+footer{
+  background: var(--hdr-3);
+  color:#e5e7eb;
+  margin:2rem 0 0;
+  padding:1rem;
+  text-align:center;
+}
+footer p{ margin:.25rem 0; }
+#lastModified{ color:#fbbf24; font-weight:600; margin-top:.25rem; }
