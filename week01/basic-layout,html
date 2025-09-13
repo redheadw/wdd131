@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 01 – Basic Layout</title>
+  <link rel="stylesheet" href="../styles/base.css">
+</head>
+<body>
+  <header>
+    <h1>Week 01: Basic Layout</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="basic-layout.html">Week 01</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Overview</h2>
+      <p>This page demonstrates a simple layout for Week 01.</p>
+    </section>
+
+    <section class="card">
+      <h2>Example Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at orci vitae lorem feugiat pretium.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> • Gwyn Wright</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="../scripts/getdates.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
