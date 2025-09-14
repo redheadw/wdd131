@@ -1,0 +1,18 @@
+/* Larger screens: 700px+ */
+.nav ul {
+  display: flex !important;  /* always visible */
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+.menu-btn { display: none; } /* hide hamburger */
+
+.grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columns on large */
+  gap: 1.25rem;
+}
+
+/* Optional hover effect on figures */
+figure:hover { transform: translateY(-2px); }
+figure { transition: transform .15s ease-out; }

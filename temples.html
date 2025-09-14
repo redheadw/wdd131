@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Temple Album | WDD 131</title>
+  <meta name="description" content="A responsive temple photo album with accessible navigation." />
+
+  <!-- Google Fonts (2 families, display=swap for performance) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Mobile-first CSS first, then large-screen overrides -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 700px)">
+
+  <!-- Defer JS -->
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <button id="menuButton" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+      <span class="title">Temple Album</span>
+    </div>
+
+    <nav id="mainNav" class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="?filter=old" data-filter="old">Old</a></li>
+        <li><a href="?filter=new" data-filter="new">New</a></li>
+        <li><a href="?size=large" data-size="large">Large</a></li>
+        <li><a href="?size=small" data-size="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Temple Album</h1>
+
+    <section class="grid" aria-live="polite">
+      <figure>
+        <img src="images\512px-LDS_Laie_Hawaii_Temple_front_view.jpg" width="800" height="600" loading="lazy" alt="Laie Hawaii Temple exterior">
+        <figcaption>Laie Hawaii Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images\512px-San_Diego_Temple.jpg" width="800" height="600" loading="lazy" alt="San Diego California Temple exterior at twilight">
+        <figcaption>San Diego California Temple</figcaption>
+      </figure>
+
+      
+      <figure>
+        <img src="images\512px-Bentonville_Arkansas_Temple_20230619_0928.jpg" width="800" height="600" loading="lazy" alt="Bentonville Arkansas Temple exterior">
+        <figcaption>Bentonville Arkansas Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images\512px-St._George_Utah_Temple,_a_temple_of_the_Church_of_Jesus_Christ_of_Latter-Day_Saints_(LDS_Church)_in_St._George,_Utah.jpg" width="800" height="600" loading="lazy" alt="Oakland California Temple exterior with spires">
+        <figcaption>St George Temple</figcaption>
+      </figure>
+
+      
+      <figure>
+        <img src="images\512px-The_Church_of_Jesus_Christ_of_Latter-day_Saints_-_Idaho_Falls.jpg" width="800" height="600" loading="lazy" alt="Historic Salt Lake City Temple exterior">
+        <figcaption>Idaho Falls Templs</figcaption>
+      </figure>
+
+      
+
+      <figure>
+        <img src="images\512px-Kansas_City_Temple.jpg" width="800" height="600" loading="lazy" alt="Mount Timpanogos Utah Temple exterior">
+        <figcaption>Kansas City Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src= "images\512px-Philadelphia_Temple.jpg" width="800" height="600" loading="lazy" alt="Philadelphia Pennsylvania Temple exterior">
+        <figcaption>Philadelphia Pennsylvania Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images\512px-Washington_DC_Temple.jpg" width="800" height="600" loading="lazy" alt="Washington D.C. Temple exterior">
+        <figcaption>Washington D.C. Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temples/jordanriver.jpg" width="800" height="600" loading="lazy" alt="Jordan River Utah Temple exterior">
+        <figcaption>Jordan River Utah Temple</figcaption>
+      </figure>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> • Temple Album • WDD 131</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
