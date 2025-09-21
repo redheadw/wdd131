@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore Oklahoma in the United States</title>
+  <meta name="description" content="Highlights, weather, and sights of Oklahoma." />
+  <link rel="preload" as="image" href="images/washington-640.webp" />
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="banner" role="note" aria-label="Announcement">
+    Celebrate Freedom 
+  </div>
+  <h1>United States of America</h1>
+  <p class="tagline">Land of liberty, home of the brave</p>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" aria-label="Washington Monument">
+  <img
+    src="images/washington-640.webp"
+    srcset="images/washington-640.webp 640w,
+            images/washington-800.webp 800w,
+            images/washington-1280.webp 1280w"
+   
+      sizes="(max-width: 720px) 100vw, (max-width: 1200px) 66vw, 50vw"
+      alt="Washington Monument at sunrise in Washington, D.C."
+    />
+    <figcaption class="sr-only">Washington Monument</figcaption>
+  </section>
+
+  <!-- LEFT COLUMN -->
+  <article class="about" aria-labelledby="about-h2">
+    <h2 id="about-h2">About the Country</h2>
+    <p>
+      From prairie farms to coastal cities, the U.S. spans diverse landscapes,
+      cultures, and traditions.
+    </p>
+    <ul>
+      <li>Population: ~331 million</li>
+      <li>Capital: Washington, D.C.</li>
+      <li>Languages: English</li>
+    </ul>
+  </article>
+
+  <!-- RIGHT COLUMN: Weather -->
+  <aside class="weather" aria-labelledby="weather-h2">
+    <h2 id="weather-h2">Weather</h2>
+    <img class="weather-icon" src="images/weather-icon.svg" alt="Partly cloudy icon" width="64" height="64" />
+    <dl class="wx">
+      <div><dt>Temperature:</dt><dd><span id="temp">92</span> °F</dd></div>
+      <div><dt>Wind:</dt><dd><span id="wind">12</span> mph</dd></div>
+      <div><dt>Wind Chill:</dt><dd id="windchill">N/A</dd></div>
+      <div><dt>Conditions:</dt><dd>Partly Cloudy</dd></div>
+    </dl>
+  </aside>
+
+  <!-- GALLERY / POINTS -->
+  <section class="sights" aria-labelledby="sights-h2">
+  <h2 id="sights-h2">Don’t Miss</h2>
+  <ul class="cards">
+
+    <!-- Card 1: American Farmstead -->
+    <li class="card">
+      <picture>
+        <source 
+          srcset="images/barn-640.webp 640w, images/barn-800.webp 800w, images/barn-1280.webp 1280w"
+          sizes="(max-width: 720px) 100vw, 33vw" />
+        <img 
+          src="images/barn-800.webp" 
+          width="800" height="533" 
+          alt="Classic red barn and windmill on the prairie" />
+      </picture>
+      <h3>American Farmstead</h3>
+      <p>Open skies and working ranches across the heartland.</p>
+    </li>
+
+    <!-- Card 2: Golden Gate Bridge -->
+    <li class="card">
+      <picture>
+        <source 
+          srcset="images/golden-gate-640.webp 640w, images/golden-gate-800.webp 800w, images/golden-gate-1280.webp 1280w"
+          sizes="(max-width: 720px) 100vw, 33vw" />
+        <img 
+          src="images/golden-gate-800.webp" 
+          width="800" height="533" 
+          alt="Golden Gate Bridge at sunset" />
+      </picture>
+      <h3>Golden Gate Bridge</h3>
+      <p>San Francisco’s iconic bridge a marval of engineering</p>
+    </li>
+
+    <!-- Card 3: Stars and Stripes -->
+    <li class="card">
+      <picture>
+        <source 
+          srcset="images/us-flag-640.webp 640w, images/us-flag-800.webp 800w, images/us-flag-1280.webp 1280w"
+          sizes="(max-width: 720px) 100vw, 33vw" />
+        <img 
+          src="images/us-flag-800.webp" 
+          width="800" height="420" 
+          alt="United States flag, stars and stripes" />
+      </picture>
+      <h3>Stars & Stripes</h3>
+      <p>Red, white, and blue — our national symbol.</p>
+    </li>
+
+  </ul>
+</section>
+
+<footer class="site-footer">
+  <p>
+    &copy; <span id="year"></span> • Explore USA
+    <span class="sep" aria-hidden="true">•</span>
+    Last Modified: <span id="last-modified"></span>
+  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Menu – Week 02</title>
+  <meta name="description" content="Responsive hamburger menu demo." />
+  <meta name="author" content="Gwyn Wright" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/menu.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#">WDD 131</a>
+
+    <!-- Hamburger button -->
+    <button
+      id="menu"
+      class="menu-toggle"
+      type="button"
+      aria-controls="primary-nav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    ></button>
+
+    <nav id="primary-nav" class="nav">
+      <ul>
+        <li><a href="#" class="active" title="About Us">About Us</a></li>
+        <li><a href="#" title="Services">Services</a></li>
+        <li><a href="#" title="Blog">Blog</a></li>
+        <li><a href="#" title="Contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Responsive Menu</h1>
+    <p>Resize the window or tap the hamburger (≡) to open/close the menu.</p>
+  </main>
+
+  <script src="scripts/menu.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* Only applies when viewport width is 500px or greater */
+@media (min-width: 500px) {
+  header {
+    background: #000;
+    color: #fff;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 1rem;
+  }
+}

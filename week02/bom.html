@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BOM Top 10 – Week 02</title>
+  <meta name="description" content="Enter favorite Book of Mormon chapters and display them in a list." />
+  <meta name="author" content="Gwyn Wright" />
+
+  <!-- Roboto (same modern embed you used before) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="styles/bom.css" />
+</head>
+<body>
+  <header>
+    <h1>BOM Top 10</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Add Your Favorite Chapter</h2>
+
+      <div class="input-row">
+        <label for="favchap" class="sr-only">Favorite chapter</label>
+        <input id="favchap" type="text" placeholder="Alma 5" />
+        <button type="button" aria-label="Add chapter">Add</button>
+      </div>
+
+      <ul id="list" class="chapter-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> • Gwyn Wright</p>
+  </footer>
+
+  <script src="scripts/bom.js" defer></script>
+</body>
+</html>
