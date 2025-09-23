@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filtered Temples | WDD 131</title>
+  <meta name="description" content="Filterable, lazy-loaded temple album." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Your CSS (same as before) -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 700px)">
+
+  <!-- New JS -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <button id="menuButton" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+      <span class="title">Temple Album</span>
+    </div>
+
+    <nav id="mainNav" class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="filtered-temples.html">Home</a></li>
+        <li><a href="?filter=old" data-filter="old">Old</a></li>
+        <li><a href="?filter=new" data-filter="new">New</a></li>
+        <li><a href="?size=large" data-size="large">Large</a></li>
+        <li><a href="?size=small" data-size="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Temple Album</h1>
+
+    <!-- JS will populate this -->
+    <section id="cards" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> • Temple Album • WDD 131</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
