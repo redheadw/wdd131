@@ -1,8 +1,6 @@
-/* =========================
-   Data
-   ========================= */
+
 const temples = [
-  // Use absolute URLs if you want, or local images in /images. Use forward slashes (/), not backslashes (\).
+ 
   {
     name: "Laie Hawaii Temple",
     location: "Laie, Hawaii, USA",
@@ -73,7 +71,7 @@ const temples = [
     location: "Salt Lake City, Utah, USA",
     dedicated: "1893-04-06",
     area: 382207,
-    imageUrl: "https://cdn.churchofjesuschrist.org/temples/salt-lake-temple/exterior.jpg", // example absolute
+    imageUrl: "https://cdn.churchofjesuschrist.org/temples/salt-lake-temple/exterior.jpg", 
   },
   {
     name: "Rome Italy Temple",
@@ -91,9 +89,7 @@ const temples = [
   },
 ];
 
-/* =========================
-   Helpers
-   ========================= */
+// help
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
@@ -124,9 +120,7 @@ function bySize(option) {
   }
 }
 
-/* =========================
-   Render
-   ========================= */
+//Render
 const cards = $("#cards");
 
 function render(list) {
@@ -163,9 +157,7 @@ function render(list) {
   cards.append(frag);
 }
 
-/* =========================
-   Filtering & Nav
-   ========================= */
+//Filter/Nav
 function applyFromURL() {
   const params = new URLSearchParams(location.search);
   const filter = params.get("filter"); // old | new
@@ -187,7 +179,7 @@ function wireNav() {
     menuBtn.setAttribute("aria-expanded", String(open));
   });
 
-  // Filter links (use data-* to decide)
+  // Filter links 
   $("#mainNav").addEventListener("click", (e) => {
     const a = e.target.closest("a");
     if (!a) return;
@@ -195,10 +187,10 @@ function wireNav() {
     const filter = a.dataset.filter || null;
     const size = a.dataset.size || null;
 
-    // Let "Home" fall through to no params
+   
     e.preventDefault();
 
-    // Update URL (so you can deep-link and refresh)
+    // Update URL 
     const params = new URLSearchParams();
     if (filter) params.set("filter", filter);
     if (size) params.set("size", size);
@@ -215,9 +207,7 @@ function wireNav() {
   });
 }
 
-/* =========================
-   Footer info
-   ========================= */
+//Footer
 function updateFooter() {
   const yearEl = $("#year");
   const modEl = $("#lastModified");
@@ -225,11 +215,9 @@ function updateFooter() {
   modEl.textContent = `Last modified: ${document.lastModified}`;
 }
 
-/* =========================
-   Init
-   ========================= */
+
 document.addEventListener("DOMContentLoaded", () => {
   wireNav();
-  applyFromURL();   // initial render (supports deep links like ?filter=old)
+  applyFromURL();   
   updateFooter();
 });
