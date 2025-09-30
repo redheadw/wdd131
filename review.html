@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Review Submitted</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+<h1>Thanks for your review!</h1>
+<p class="subtitle">We received the details below.</p>
+</header>
+
+
+<main>
+<section class="card">
+<h2>Submission Summary</h2>
+<dl id="summary" class="summary"></dl>
+</section>
+
+
+<section class="card">
+<h2>Your Review Streak</h2>
+<p>You have submitted <strong id="reviewCount">0</strong> review(s) on this device/browser.</p>
+<p class="muted">(We track this using <code>localStorage</code> as required.)</p>
+<a class="btn" href="form.html">Submit another review</a>
+</section>
+</main>
+
+
+<footer class="site-footer">
+<p>© <span id="year"></span> Your Name • WDD Assignment</p>
+</footer>
+
+
+<script>
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+
+// Increment and display the localStorage counter
+const KEY = 'reviewCount';
+const current = Number(localStorage.getItem(KEY) || 0) + 1;
+localStorage.setItem(KEY, String(current));
+document.getElementById('reviewCount').textContent = current;
+
+
+// Render submitted GET params
+const params = new URLSearchParams(window.location.search);
+
+
+// Helper: join multiple values (checkboxes)
+function getAll(name) {
+const values = params.getAll(name);
+if (!values.length) return '—';
+return values.join(', ');
+}
+
+
+const rows = [
+['Product', params.get('product') || '—'],
+['Rating', params.get('rating') || '—'],
+['Installed On', params.get('installDate') || '—'],
+['Useful Features', getAll('features')],
+['Written Review', params.get('comments') || '—'],
+['User Name', params.get('userName') || '—']
+]
+
+
+  const dl = document.getElementById('summary');
+  rows.forEach(([term, val]) => {
+    const dt = document.createElement('dt');
+    dt.textContent = term;
+    const dd = document.createElement('dd');
+    dd.textContent = val;
+    dl.append(dt, dd);
+  });
+</script>
+</body>
+</html>
