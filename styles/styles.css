@@ -42,14 +42,14 @@ input[type="text"], input[type="date"], select, textarea {
   background: #0f1430;
   color: var(--text);
 }
-input[type="text"]::placeholder, textarea::placeholder { color: color-mix(in oklab, var(--muted) 85%, white); }
+input[type="text"]::placeholder, textarea::placeholder {  color: #cfd5e6;}
 
 input[type="text"]:focus,
 input[type="date"]:focus,
 select:focus, textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 35%, transparent);
+  box-shadow: 0 0 0 3px rgba(106, 169, 255, 0.35);
 }
 
 .checkbox-grid {
@@ -85,7 +85,7 @@ select:focus, textarea:focus {
   padding: .75rem 1.25rem;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,.15);
-  background: linear-gradient(180deg, color-mix(in oklab, var(--accent) 45%, transparent), color-mix(in oklab, var(--accent-2) 35%, #000));
+  background: linear-gradient(180deg,  rgba(106, 169, 255, 0.45), #362b59);
   color: white;
   font-weight: 700;
   text-decoration: none;
