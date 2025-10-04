@@ -1,0 +1,396 @@
+<!-- ======================= index.html ======================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeldPath — Welding Careers & Techniques</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="lockup">
+      <div class="logo" aria-label="Logo: welding torch icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1b1207" stroke-width="1.5" aria-hidden="true">
+          <path d="M5 16h6"/>
+          <path d="M11 16l5-5"/>
+          <path d="M16 11l3-1"/>
+          <circle cx="19" cy="10" r="1.5" fill="#ffd27a"/>
+        </svg>
+      </div>
+      <div>
+        <h1>WeldPath</h1>
+        <p class="subtitle">Your path into welding fundamentals & careers</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="types.html">Types of Welding</a>
+      <a href="careers.html">Careers</a>
+      <a href="safety.html">Safety</a>
+      <a href="request-info.html">Request Info</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Build a strong future with in‑demand welding skills</h2>
+      <p>Explore common welding processes, essential gear, and the certifications that open doors in construction, manufacturing, and automotive.</p>
+      <p><a class="btn" href="types.html">Compare welding processes</a> <a class="btn ghost" href="request-info.html">Request training info</a></p>
+    </section>
+
+    <section class="grid-2">
+      <div class="card">
+        <h3>New to welding?</h3>
+        <p>Start with a quick overview of MIG, TIG, Stick, and Flux‑Cored. Learn which process fits automotive frames, structural steel, or thin sheet metal.</p>
+        <p><a class="link" href="types.html">See the processes →</a></p>
+      </div>
+      <div class="card">
+        <h3>Plan your path</h3>
+        <p>Understand certifications employers look for, typical timelines, and industries where welders are in demand.</p>
+        <p><a class="link" href="careers.html">Explore careers →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WeldPath • <span id="lastmod"></span></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+<!-- ======================= types.html ======================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeldPath — Types of Welding</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="lockup">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1b1207" stroke-width="1.5"><path d="M5 16h6"/><path d="M11 16l5-5"/><path d="M16 11l3-1"/><circle cx="19" cy="10" r="1.5" fill="#ffd27a"/></svg>
+      </div>
+      <div>
+        <h1>Types of Welding</h1>
+        <p class="subtitle">MIG • TIG • Stick • Flux‑Cored</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="types.html" aria-current="page">Types of Welding</a>
+      <a href="careers.html">Careers</a>
+      <a href="safety.html">Safety</a>
+      <a href="request-info.html">Request Info</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="tabs">
+      <button class="process-tab" data-target="#mig" aria-pressed="true">MIG (GMAW)</button>
+      <button class="process-tab" data-target="#tig">TIG (GTAW)</button>
+      <button class="process-tab" data-target="#stick">Stick (SMAW)</button>
+      <button class="process-tab" data-target="#fcaw">Flux‑Cored (FCAW)</button>
+    </div>
+
+    <section id="mig" class="process on" tabindex="0">
+      <h2>MIG — Gas Metal Arc Welding</h2>
+      <ul>
+        <li><strong>Best for:</strong> General fabrication, production work</li>
+        <li><strong>Pros:</strong> Faster, easier to learn, good on thin to medium steel</li>
+        <li><strong>Cons:</strong> Sensitive to wind (shielding gas)</li>
+      </ul>
+    </section>
+
+    <section id="tig" class="process" hidden tabindex="0">
+      <h2>TIG — Gas Tungsten Arc Welding</h2>
+      <ul>
+        <li><strong>Best for:</strong> Precision work, thin metals, aluminum & stainless</li>
+        <li><strong>Pros:</strong> Clean, strong, precise control</li>
+        <li><strong>Cons:</strong> Slower; higher skill requirement</li>
+      </ul>
+    </section>
+
+    <section id="stick" class="process" hidden tabindex="0">
+      <h2>Stick — Shielded Metal Arc Welding</h2>
+      <ul>
+        <li><strong>Best for:</strong> Outdoor/field work, thicker materials</li>
+        <li><strong>Pros:</strong> Portable, tolerates dirty/rusty steel</li>
+        <li><strong>Cons:</strong> More cleanup (slag), harder on thin metal</li>
+      </ul>
+    </section>
+
+    <section id="fcaw" class="process" hidden tabindex="0">
+      <h2>Flux‑Cored — FCAW</h2>
+      <ul>
+        <li><strong>Best for:</strong> Heavy fabrication, structural steel</li>
+        <li><strong>Pros:</strong> High deposition rates, good outdoors (self‑shielded)</li>
+        <li><strong>Cons:</strong> More spatter; wire cost</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WeldPath • <span id="lastmod"></span></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+<!-- ======================= careers.html ======================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeldPath — Careers & Opportunities</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="lockup">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1b1207" stroke-width="1.5"><path d="M5 16h6"/><path d="M11 16l5-5"/><path d="M16 11l3-1"/><circle cx="19" cy="10" r="1.5" fill="#ffd27a"/></svg>
+      </div>
+      <div>
+        <h1>Careers & Opportunities</h1>
+        <p class="subtitle">Certifications • Industries • Roles</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="types.html">Types of Welding</a>
+      <a href="careers.html" aria-current="page">Careers</a>
+      <a href="safety.html">Safety</a>
+      <a href="request-info.html">Request Info</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Common Certifications</h2>
+      <ul>
+        <li>Entry‑level performance qualification (e.g., plate, position 1G–4G)</li>
+        <li>Process‑specific tickets (MIG, TIG, Stick)</li>
+        <li>Special materials (stainless, aluminum)</li>
+      </ul>
+    </section>
+
+    <section class="grid-2">
+      <div class="card">
+        <h3>Industries</h3>
+        <ul>
+          <li>Construction & structural steel</li>
+          <li>Automotive & motorsports</li>
+          <li>Manufacturing & fabrication</li>
+          <li>Shipbuilding & pipelines</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Roles</h3>
+        <ul>
+          <li>Welder/Fabricator</li>
+          <li>Pipe Welder</li>
+          <li>Welding Inspector (advanced)</li>
+          <li>Maintenance/Repair Welder</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WeldPath • <span id="lastmod"></span></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+<!-- ======================= safety.html ======================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeldPath — Safety & Equipment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="lockup">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1b1207" stroke-width="1.5"><path d="M5 16h6"/><path d="M11 16l5-5"/><path d="M16 11l3-1"/><circle cx="19" cy="10" r="1.5" fill="#ffd27a"/></svg>
+      </div>
+      <div>
+        <h1>Safety & Equipment</h1>
+        <p class="subtitle">PPE • Shop Safety • Tools</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="types.html">Types of Welding</a>
+      <a href="careers.html">Careers</a>
+      <a href="safety.html" aria-current="page">Safety</a>
+      <a href="request-info.html">Request Info</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Essential PPE</h2>
+      <ul>
+        <li>Auto‑darkening helmet, safety glasses</li>
+        <li>Flame‑resistant jacket and gloves</li>
+        <li>Proper boots; avoid synthetic fabrics</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Shop Safety Basics</h2>
+      <ul>
+        <li>Ventilation for fumes and gases</li>
+        <li>Clear work area; fire watch where needed</li>
+        <li>Cylinder handling and storage best practices</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WeldPath • <span id="lastmod"></span></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+<!-- ======================= request-info.html ======================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeldPath — Request Training Info</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="lockup">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1b1207" stroke-width="1.5"><path d="M5 16h6"/><path d="M11 16l5-5"/><path d="M16 11l3-1"/><circle cx="19" cy="10" r="1.5" fill="#ffd27a"/></svg>
+      </div>
+      <div>
+        <h1>Request Training Info</h1>
+        <p class="subtitle">We’ll save your details on this device for convenience.</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="types.html">Types of Welding</a>
+      <a href="careers.html">Careers</a>
+      <a href="safety.html">Safety</a>
+      <a href="request-info.html" aria-current="page">Request Info</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form id="infoForm" class="card" novalidate>
+      <div class="form-row">
+        <label for="name">Full Name <span aria-hidden="true">*</span></label>
+        <input id="name" name="name" type="text" required />
+      </div>
+      <div class="form-row">
+        <label for="email">Email <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" required />
+      </div>
+      <div class="form-row">
+        <label for="interest">Primary Interest</label>
+        <select id="interest" name="interest">
+          <option value="MIG">MIG</option>
+          <option value="TIG">TIG</option>
+          <option value="Stick">Stick</option>
+          <option value="FCAW">Flux‑Cored</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us what you’d like to learn"></textarea>
+      </div>
+      <div class="actions">
+        <button class="btn" type="submit">Send</button>
+        <button class="btn ghost" type="button" id="clearStorage">Clear saved info</button>
+      </div>
+      <p id="formStatus" role="status" class="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WeldPath • <span id="lastmod"></span></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+<!-- ======================= references.html ======================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeldPath — References</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="lockup">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1b1207" stroke-width="1.5"><path d="M5 16h6"/><path d="M11 16l5-5"/><path d="M16 11l3-1"/><circle cx="19" cy="10" r="1.5" fill="#ffd27a"/></svg>
+      </div>
+      <div>
+        <h1>References</h1>
+        <p class="subtitle">Citations for images and information used</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="types.html">Types of Welding</a>
+      <a href="careers.html">Careers</a>
+      <a href="safety.html">Safety</a>
+      <a href="request-info.html">Request Info</a>
+      <a href="references.html" aria-current="page">References</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <ul class="refs">
+      <li>Placeholder — add sources here as you build pages.</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WeldPath • <span id="lastmod"></span></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+<!-- ======================= styles.css ======================= -->
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap');
