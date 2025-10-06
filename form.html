@@ -15,22 +15,21 @@
 
 <main>
   <!-- method="get" + action to review.html per requirements -->
-  <form id="reviewForm" method="get" action="review.html" novalidate>
-    <!-- Product Name -->
+  <form id="reviewForm" method="get" action="review.html">
+  <!-- Product Name (unchanged except we’ll populate with JS) -->
     <div class="form-row">
       <label for="product">Product Name <span aria-hidden="true">*</span></label>
-      <select id="product" name="product" required>
+      <select id="product" name="product" required aria-describedby="product-hint">
         <option value="" disabled selected>Select a Product ...</option>
-      
       </select>
       <small class="hint" id="product-hint">Choose the exact product you installed.</small>
     </div>
 
-    <!-- Overall Rating -->
-    <div class="form-row">
-    <label>Overall Rating *</label>
+  <!-- Overall Rating -->
+  <fieldset class="form-row" aria-required="true">
+    <legend>Overall Rating <span aria-hidden="true">*</span></legend>
     <div class="rating">
-      <input type="radio" id="star5" name="rating" value="5">
+      <input type="radio" id="star5" name="rating" value="5" required>
       <label for="star5" title="5 stars"></label>
 
       <input type="radio" id="star4" name="rating" value="4">
@@ -45,7 +44,7 @@
       <input type="radio" id="star1" name="rating" value="1">
       <label for="star1" title="1 star"></label>
     </div>
-    </div>
+  </fieldset>
 
 
     <!-- Date of Installation -->
