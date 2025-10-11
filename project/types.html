@@ -4,7 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WeldPath — Types of Welding</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Compare MIG, TIG, Stick, and Flux-Cored welding processes.">
+
+  <!-- Global styles (repo root) -->
+  <link rel="stylesheet" href="../styles/base.css">
+  <!-- Project styles (inside /project) -->
+  <link rel="stylesheet" href="styles/siteplan.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,26 +26,31 @@
       <a href="types.html" aria-current="page">Types of Welding</a>
       <a href="careers.html">Careers</a>
       <a href="safety.html">Safety</a>
-      <a href="request-info.html">Request Info</a>
+      <a href="requestinfo.html">Request Info</a>
       <a href="references.html">References</a>
     </nav>
   </header>
 
   <main id="main" class="container">
+    <!-- Tabs -->
     <div class="tabs" role="tablist" aria-label="Welding processes">
-      <button class="process-tab" data-target="#mig" aria-pressed="true">MIG</button>
-      <button class="process-tab" data-target="#tig">TIG</button>
-      <button class="process-tab" data-target="#stick">Stick</button>
-      <button class="process-tab" data-target="#fcaw">Flux-Cored</button>
+      <button class="process-tab" id="tab-mig" role="tab" aria-selected="true" aria-controls="panel-process" data-target="#mig">MIG</button>
+      <button class="process-tab" id="tab-tig" role="tab" aria-selected="false" aria-controls="panel-process" data-target="#tig">TIG</button>
+      <button class="process-tab" id="tab-stick" role="tab" aria-selected="false" aria-controls="panel-process" data-target="#stick">Stick</button>
+      <button class="process-tab" id="tab-fcaw" role="tab" aria-selected="false" aria-controls="panel-process" data-target="#fcaw">Flux-Cored</button>
     </div>
 
     <!-- JS renders the active process here -->
-    <section class="process" tabindex="0" aria-live="polite"></section>
+    <section class="process" id="panel-process" role="tabpanel" tabindex="0" aria-live="polite" aria-labelledby="tab-mig">
+      <!-- Content populated by scripts/main.js based on the active tab -->
+    </section>
   </main>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> WeldPath • <span id="lastmod"></span></p>
   </footer>
-  <script src="main.js" defer></script>
+
+  <!-- Project script -->
+  <script src="scripts/main.js" defer></script>
 </body>
 </html>
