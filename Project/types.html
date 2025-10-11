@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeldPath — Types of Welding</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="lockup">
+      <div>
+        <h1>Types of Welding</h1>
+        <p class="subtitle">MIG • TIG • Stick • Flux-Cored</p>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="types.html" aria-current="page">Types of Welding</a>
+      <a href="careers.html">Careers</a>
+      <a href="safety.html">Safety</a>
+      <a href="request-info.html">Request Info</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <div class="tabs" role="tablist" aria-label="Welding processes">
+      <button class="process-tab" data-target="#mig" aria-pressed="true">MIG</button>
+      <button class="process-tab" data-target="#tig">TIG</button>
+      <button class="process-tab" data-target="#stick">Stick</button>
+      <button class="process-tab" data-target="#fcaw">Flux-Cored</button>
+    </div>
+
+    <!-- JS renders the active process here -->
+    <section class="process" tabindex="0" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WeldPath • <span id="lastmod"></span></p>
+  </footer>
+  <script src="main.js" defer></script>
+</body>
+</html>

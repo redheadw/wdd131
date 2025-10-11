@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WeldPath — Website Planning Document</title>
-  <!-- Use the same external CSS the plan references so the colors/typography are actually applied -->
+  <meta name="description" content="Website planning document for WeldPath: site name, purpose, scenarios, color schema, typography, and wireframes.">
   <link rel="stylesheet" href="siteplan.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
     <p class="subtitle">W05 Project: Website Planning Document</p>
   </header>
 
-  <main class="container">
+  <main class="container" id="main">
     <section>
       <h2>1. Site Name</h2>
       <p><strong>WeldPath</strong> — a clear, memorable name indicating a guided path into welding fundamentals and careers.</p>
@@ -80,7 +80,6 @@
       <div class="wireframes">
         <figure class="wf">
           <figcaption>Mobile Wireframe</figcaption>
-          <!-- simple accessible boxes to represent layout -->
           <div class="box header">Logo / Title</div>
           <div class="box hero">Hero Text + CTA</div>
           <div class="box card">Process Cards</div>
@@ -90,19 +89,13 @@
 
         <figure class="wf">
           <figcaption>Desktop Wireframe</figcaption>
-          <div class="row">
-            <div class="box header wide">Logo / Nav</div>
-          </div>
-          <div class="row">
-            <div class="box hero wide">Hero Text + CTAs</div>
-          </div>
+          <div class="row"><div class="box header wide">Logo / Nav</div></div>
+          <div class="row"><div class="box hero wide">Hero Text + CTAs</div></div>
           <div class="row grid">
             <div class="box card">Processes</div>
             <div class="box card">Careers</div>
           </div>
-          <div class="row">
-            <div class="box footer wide">Footer</div>
-          </div>
+          <div class="row"><div class="box footer wide">Footer</div></div>
         </figure>
       </div>
     </section>
@@ -111,16 +104,13 @@
       <h2>7. Naming Conventions</h2>
       <p>All files use lowercase, hyphen-separated names (e.g., <code>index.html</code>, <code>types.html</code>, <code>request-info.html</code>, <code>styles.css</code>, <code>main.js</code>).</p>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> WeldPath • Planning Document</p>
   </footer>
 
-  <script>
-    // small enhancement, HTML-valid and optional
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- externalized script -->
+  <script src="siteplan.js" defer></script>
 </body>
 </html>
