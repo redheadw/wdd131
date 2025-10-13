@@ -1,11 +1,11 @@
-/* Import Google Fonts at the very top (required by CSS spec) */
+/* Import Google Fonts at the very top  */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap");
 
-/* -----------------------------
+/* ----------------
    Color tokens
---------------------------------*/
+--------------------*/
 :root{
-  /* base palette (yours) */
+  /* base palette  */
   --bg: #0b1020;
   --panel: #11162a;
   --text: #e6ecff;
@@ -25,9 +25,9 @@
   --card-border: rgba(255,255,255,.06);
 }
 
-/* -----------------------------
+/* --------
    Base
---------------------------------*/
+------------*/
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 
@@ -47,9 +47,9 @@ body{
   background-attachment: fixed;
 }
 
-/* -----------------------------
+/* ----------
    Layout
---------------------------------*/
+-------------*/
 .container{
   max-width: 900px;
   margin: 0 auto;
@@ -68,9 +68,9 @@ body{
   border-bottom: 0;
 }
 
-/* -----------------------------
+/* ----------------
    Typography
---------------------------------*/
+-------------------*/
 h1, h2, h3{
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: .5px;
@@ -108,9 +108,9 @@ a:hover, a:focus{ text-decoration: underline; }
 }
 .refs li{ line-height: 1.6; }
 
-/* -----------------------------
-   Swatches (from your plan page)
---------------------------------*/
+/* ------------
+   Swatches 
+---------------*/
 .swatches{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -135,9 +135,9 @@ a:hover, a:focus{ text-decoration: underline; }
 .chip--accent{ background: var(--accent); }
 .chip--accent2{ background: var(--accent-2); }
 
-/* -----------------------------
-   Wireframes (from your plan page)
---------------------------------*/
+/* ------------
+   Wireframes 
+----------------*/
 .wireframes{
   display: grid;
   grid-template-columns: 1fr;
@@ -188,24 +188,25 @@ a:hover, a:focus{ text-decoration: underline; }
 }
 .btn:hover{ filter: brightness(1.08); }
 
-/* Placeholder for hero image until assets are added */
-.hero-placeholder{
-  height: 220px;
-  border-radius: 12px;
-  background:
-    radial-gradient(18rem 8rem at 30% 10%, rgba(255,207,112,.25), transparent 60%),
-    radial-gradient(14rem 7rem at 70% 0%,   rgba(255,157,46,.18), transparent 65%),
-    rgba(255,255,255,.03);
-  border: 1px solid var(--card-border);
-  display: grid;
-  place-items: center;
-  color: var(--muted);
-  margin: .5rem 0 1rem;
+/* ---------------
+Image
+------------------*/
+.hero{
+  background: url("images/welder.jpg") center 30% / cover no-repeat;
+  block-size: clamp(240px, 55vh, 520px); 
 }
 
-/* -----------------------------
+.hero-content{
+  position: absolute;
+  inset: auto 4% 6% auto;
+}
+
+
+
+
+/* ---------------
    Accessibility
---------------------------------*/
+--------------------*/
 :focus{
   outline: 2px solid var(--accent);
   outline-offset: 2px;
